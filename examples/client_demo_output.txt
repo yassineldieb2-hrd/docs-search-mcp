@@ -1,0 +1,42 @@
+tools: ['list_notes', 'search_notes', 'read_note', 'fetch_url', 'convert_time']
+
+list_notes({}) ->
+{
+  "path": "lora-cheatsheet.txt",
+  "bytes": 260
+}
+{
+  "path": "mcp-notes.md",
+  "bytes": 363
+}
+{
+  "path": "rag-basics.md",
+  "bytes": 358
+}
+
+search_notes({'query': 'stdio logs stdout'}) ->
+{
+  "path": "mcp-notes.md",
+  "heading": "Transports",
+  "score": 4.787,
+  "snippet": "stdio servers are launched by the client as a subprocess and talk JSON-RPC over stdin/stdout, so they must never print logs to stdout. Streamable HTTP servers l..."
+}
+
+convert_time({'source_timezone': 'Europe/Warsaw', 'time': '10:00', 'target_timezone': 'Asia/Dubai', 'date': '2026-07-15'}) ->
+{
+  "source": {
+    "timezone": "Europe/Warsaw",
+    "datetime": "2026-07-15T10:00+02:00",
+    "weekday": "Wednesday",
+    "utc_offset": "+0200",
+    "is_dst": true
+  },
+  "target": {
+    "timezone": "Asia/Dubai",
+    "datetime": "2026-07-15T12:00+04:00",
+    "weekday": "Wednesday",
+    "utc_offset": "+0400",
+    "is_dst": false
+  },
+  "hours_ahead_of_source": 2.0
+}
