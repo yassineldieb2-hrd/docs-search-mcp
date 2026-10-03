@@ -15,7 +15,7 @@ from urllib.parse import urljoin, urlparse
 import httpx
 from markdownify import markdownify
 
-USER_AGENT = "docs-search-mcp/0.1 (+learning project)"
+USER_AGENT = "docs-search-mcp/0.1 (+https://github.com/yassineldieb2-hrd/docs-search-mcp)"
 MAX_BYTES = 2_000_000
 MAX_REDIRECTS = 3
 
